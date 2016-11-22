@@ -1,6 +1,18 @@
-<!DOCTYPE html> <html>
-<head> <title>TreasureGram</title>
+<!DOCTYPE html>
+<html>
+<head><title>TreasureGram</title>
 </head>
 <body>
-<h1>TreasureGram Preview</h1></body>
-	</html>
+<h1>TreasureGram Preview</h1>
+{% for treasure in treasures %}
+    <p>{{ treasure.name }}</p>
+    {% if treasure.value > 0 %}
+        <p>{{ treasure.value }}</p>
+    {% else %}
+        <p>Menor a 0</p>
+    {% endif %}
+    <p>--</p>
+{% endfor %}
+
+</body>
+</html>
